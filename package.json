@@ -1,0 +1,25 @@
+{
+  "name": "bookmark",
+  "version": "1.0.0",
+  "description": "CLI for bookmarking files/folders",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SatyamSetia/bookmark-cli.git"
+  },
+  "keywords": [
+    "cli"
+  ],
+  "author": "Satyam Setia",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SatyamSetia/bookmark-cli/issues"
+  },
+  "homepage": "https://github.com/SatyamSetia/bookmark-cli#readme",
+  "bin": {
+    "bm": "./cli.js"
+  }
+}
