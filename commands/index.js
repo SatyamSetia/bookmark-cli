@@ -1,5 +1,6 @@
 const add = require('./add.js');
 const remove = require('./remove.js')
+const clean = require('./clean.js')
 const goto = require('./goto.js')
 
 function command(actions, flags) {
@@ -7,6 +8,8 @@ function command(actions, flags) {
     case 'add': add(actions[1]);
     break;
     case 'remove': remove(actions[1])
+    break;
+    case 'clean': clean()
     break;
     default: goto(actions[0])
     break;
