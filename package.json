@@ -21,5 +21,8 @@
   "homepage": "https://github.com/SatyamSetia/bookmark-cli#readme",
   "bin": {
     "bm": "./cli.js"
+  },
+  "dependencies": {
+    "meow": "^5.0.0"
   }
 }
