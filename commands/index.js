@@ -14,7 +14,7 @@ function command(actions, flags) {
     break;
     case 'show': show()
     break;
-    default: goto(actions[0])
+    default: goto(actions[0], show)
     break;
   }
 }

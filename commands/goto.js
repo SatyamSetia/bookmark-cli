@@ -1,11 +1,16 @@
 const bookmarks = require('./bookmarks.json')
 
-function goto(name) {
+function goto(name, show) {
+  if(!name) {
+    show()
+    return;
+  }
   if(!bookmarks.hasOwnProperty(name)) {
     console.log(`${name} is not a valid bookmark`)
     return
   }
-  require('child_process').exec('start '+bookmarks[name])
+  let cmdStr = `start ${bookmarks[name]}`
+  require('child_process').exec(cmdStr.replace(/ /g, '\\ '))
 }
 
 module.exports = goto
