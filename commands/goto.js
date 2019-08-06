@@ -9,8 +9,8 @@ function goto(name, show) {
     console.log(`${name} is not a valid bookmark`)
     return
   }
-  let cmdStr = `start ${bookmarks[name]}`
-  require('child_process').exec(cmdStr.replace(/ /g, '\\ '))
+  
+  require('child_process').exec("%SystemRoot%\\explorer.exe \"" + bookmarks[name] + "\"")
 }
 
 module.exports = goto
