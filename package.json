@@ -23,6 +23,7 @@
     "bm": "./cli.js"
   },
   "dependencies": {
+    "inquirer": "^6.5.0",
     "meow": "^5.0.0"
   }
 }
