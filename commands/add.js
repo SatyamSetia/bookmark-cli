@@ -6,6 +6,11 @@ function add(name, bmpath) {
 
     let bookmarks = JSON.parse(data);
 
+    if(bookmarks.hasOwnProperty(name)) {
+      console.log(`${name} is already a bookmark. Please choose a different name.`)
+      return;
+    }
+
     if(!bmpath) {
       bmpath = process.cwd()
     } else {
