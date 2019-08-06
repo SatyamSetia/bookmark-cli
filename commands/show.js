@@ -15,6 +15,8 @@ function show() {
     if(choices.length==0) {
       console.log('0 bookmarks found')
       return;
+    } else {
+      choices.push('None')
     }
 
     inquirer.prompt([
@@ -28,6 +30,9 @@ function show() {
         }
       }
     ]).then(answer => {
+      if(answer.destination=='None') {
+        return
+      }
       goto(answer.destination)
     })
   })
