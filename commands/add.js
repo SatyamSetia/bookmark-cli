@@ -16,7 +16,7 @@ function add(name, bmpath) {
       bmpath = process.cwd()
     } else {
       if(!fs.existsSync(bmpath)) {
-        log(error(`ERR: '${bmpath}' is not a valid path`))
+        log(error(`ERR: '${bmpath}' is not a valid path. If your path has spaces then enclose it in double quotes.`))
         return;
       }
     }
