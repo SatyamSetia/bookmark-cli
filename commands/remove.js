@@ -1,6 +1,10 @@
 const fs = require('fs')
 
 function remove(name) {
+  if(!name) {
+    console.log('Bookmark name cannot be empty')
+    return;
+  }
   fs.readFile(__dirname+'\\bookmarks.json','utf-8', (err, data) => {
     if(err) throw err;
 
