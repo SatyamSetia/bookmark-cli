@@ -1,5 +1,5 @@
 {
-  "name": "bookmark",
+  "name": "bookmark-cli",
   "version": "1.0.0",
   "description": "CLI for bookmarking files/folders.",
   "main": "index.js",
