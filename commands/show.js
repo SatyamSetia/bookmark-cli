@@ -1,6 +1,7 @@
 const fs = require('fs')
 const inquirer = require('inquirer')
 const goto = require('./goto.js')
+const { log, success } = require('./theme.js')
 
 function show() {
   fs.readFile(__dirname+'\\bookmarks.json','utf-8', (err, data) => {
@@ -13,7 +14,7 @@ function show() {
     }).sort()
 
     if(choices.length==0) {
-      console.log('0 bookmarks found')
+      log(success('No bookmarks found.'))
       return;
     } else {
       choices.push('None')

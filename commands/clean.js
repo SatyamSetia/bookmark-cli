@@ -1,10 +1,11 @@
 const fs = require('fs')
+const { log, success } = require('./theme.js')
 
 function clean() {
   fs.writeFile(__dirname+'\\bookmarks.json', JSON.stringify({}), 'utf-8', (err) => {
     if(err) throw err;
 
-    console.log('All bookmarks cleared')
+    log(success(`SUCCESS: Bookmarks cleared successfully.`))
   })
 }
 

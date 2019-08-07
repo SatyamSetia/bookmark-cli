@@ -1,4 +1,5 @@
 const fs = require('fs')
+const { log, error, success } = require('./theme.js')
 
 function add(name, bmpath) {
   fs.readFile(__dirname+'\\bookmarks.json','utf-8', async (err, data) => {
@@ -7,7 +8,7 @@ function add(name, bmpath) {
     let bookmarks = JSON.parse(data);
 
     if(bookmarks.hasOwnProperty(name)) {
-      console.log(`${name} is already a bookmark. Please choose a different name.`)
+      log(error(`ERR: '${name}' is already a bookmark. Please choose a different name.`))
       return;
     }
 
@@ -15,7 +16,7 @@ function add(name, bmpath) {
       bmpath = process.cwd()
     } else {
       if(!fs.existsSync(bmpath)) {
-        console.log(`${bmpath} is not a valid path`)
+        log(error(`ERR: '${bmpath}' is not a valid path`))
         return;
       }
     }
@@ -33,7 +34,7 @@ function add(name, bmpath) {
     bookmarks[name] = bmpath
     fs.writeFile(__dirname+'\\bookmarks.json', JSON.stringify(bookmarks), 'utf-8', (err) => {
       if(err) throw err;
-      console.log('Bookmark added successfully.')
+      log(success(`SUCCESS: '${name}' added successfully.`))
     })
   })
 }
