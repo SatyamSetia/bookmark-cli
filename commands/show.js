@@ -10,7 +10,7 @@ function show() {
 
     let choices = Object.keys(bookmarks).map((bookmark) => {
       return `${bookmark} => ${bookmarks[bookmark]}`
-    })
+    }).sort()
 
     if(choices.length==0) {
       console.log('0 bookmarks found')
@@ -23,7 +23,7 @@ function show() {
       {
         type: 'list',
         name: 'destination',
-        message: 'Choose any one:',
+        message: `Showing ${choices.length-1} bookmarks:`,
         choices: choices,
         filter: function(val) {
           return val.split(" ")[0]
