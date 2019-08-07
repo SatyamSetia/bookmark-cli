@@ -1,6 +1,6 @@
 {
   "name": "bookmark-cli",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "CLI for bookmarking files/folders.",
   "main": "index.js",
   "scripts": {
@@ -11,7 +11,14 @@
     "url": "git+https://github.com/SatyamSetia/bookmark-cli.git"
   },
   "keywords": [
-    "cli"
+    "cli",
+    "bookmark",
+    "bm",
+    "navigate",
+    "directory",
+    "file",
+    "folder",
+    "nodejs"
   ],
   "author": "Satyam Setia",
   "license": "MIT",
