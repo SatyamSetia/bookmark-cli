@@ -2,6 +2,10 @@ const fs = require('fs')
 const { log, error, success } = require('./theme.js')
 
 function add(name, bmpath) {
+  if(!name) {
+    log(error(`ERR: name cannot be empty. Check 'bm --help' for more help.`))
+    return;
+  }
   fs.readFile(__dirname+'\\bookmarks.json','utf-8', async (err, data) => {
     if(err) throw err;
 

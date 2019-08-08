@@ -3,7 +3,7 @@ const { log, error, success } = require('./theme.js')
 
 function remove(name) {
   if(!name) {
-    log(error('ERR: Bookmark name cannot be empty.'))
+    log(error(`ERR: Bookmark name cannot be empty. Check 'bm --help' for more help.`))
     return;
   }
   fs.readFile(__dirname+'\\bookmarks.json','utf-8', (err, data) => {
